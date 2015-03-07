@@ -1,2 +1,259 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaQNkhjQ_qKtXlqSvAO2Mottj-5ga9qmQ">
+  </script>
+  <script>
+  $(function () {
+    $('#Google').tooltip();
+  });
+  </script>
+  
+  <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Life+Savers' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Miniver' rel='stylesheet' type='text/css'>
+
+  <title>Jen's Web-Dev Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <img src="/img/push_pin.jpg" alt="push pin on map" class="img-responsive">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="/about">About</a></li>
+          <a class="navbar-brand" href="/">
+            <img alt="Brand" src="/img/jen.png" >
+          </a>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container-fluid" id="home">
+    <div class="row" style="margin-top:90px" id="home-row">
+      <div class="col-xs-4">
+        <img src="/img/web-dev.png" alt="web developer" class="img-responsive">
+      </div>
+      <div class="col-xs-4">
+        <img src="/img/me-vinyard.png" alt="jen at vineyard" class="img-responsive" id="me_home">
+      </div>
+      <div class="col-xs-4">
+        <img src="/img/on-the-road.png" alt="on the road" class="img-responsive">
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="container-fluid" id="about">
+    <div class="jumbotron" id="about-jumbo">
+      <h1>About Me</h1>
+    </div>
+    <div class="row">
+      <div class="col-xs-12" style="text-align:center">
+        <p><span>My road hasn't been a straight one, but it's the journey, right?</span></p> 
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <p>I come from a background of administrative work in the Government contracting industry. It's given me a solid foundation of all the great business skills: communication, organization, and leadership. But I knew I wanted something... <em>more</em>.</p>
+        <p>The fork in the road came in 2010 when I got my first DSLR camera, a Canon T1i, and a new creative passion was born. I took pictures - LOTS of them - many of my three beloved dogs because they make such great models.</p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <p>I learned Photoshop to be able to get the most out of my pictures. But it wasn't until I explored the world of HTML and web design and development that I really found myself. <em>This</em> was that something more I was looking for. A perfect blend of creativity, technical knowledge, and an exciting and ever-changing industry.</p>
+        <p>So with a lot of studying, practicing, and even more coffee, I can now proudly call myself a <strong>web developer</strong>. I've found my path and while it might have taken me a while, I'm also proud of my journey.</p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <p>To start off my new career, my husband and I have decided to pack up the dogs to make a literal journey and move south from Maryland to Charlotte, NC. Follow my <a href="https://twitter.com/jenduvall330" target="_blank">Twitter feed</a> for all the updates on the move!</p>
+        <p>When I'm not tapping out code or packing up belongings, I love checking out new restaurants, drinking good wine, and traveling, even if it's just local. I'll also take any opportunity to go outdoors for hiking, camping, or kayaking. I enjoy crafting DIY decor for our home and, just to be a little strange, I have an uncanny memory for any bit of celebrity gossip. Keep that in your back pocket for the next office trivia game!</p> 
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div id="carousel-about" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-about" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-about" data-slide-to="1"></li>
+            <li data-target="#carousel-about" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="/img/marknme1.jpg" alt="mark and me">
+            </div>
+            <div class="item">
+              <img src="/img/elsie2.jpg" alt="elsie">
+            </div>
+            <div class="item">
+              <img src="/img/otto.jpg" alt="otto">
+            </div>
+            <div class="item">
+              <img src="/img/riley.jpg" alt="riley">
+            </div>
+            <div class="item">
+              <img src="/img/skins.jpg" alt="me and mark at skins game">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row" id="tweet">
+        <div class="col-xs-4 col-xs-offset-6">
+          <a class="twitter-timeline" href="https://twitter.com/jenduvall330" data-widget-id="571100045890842624">Tweets by @jenduvall330</a>
+        </div>
+      </div>
+      <img src="/img/car-map.jpg" alt="car on road map" class="img-responsive">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="work">
+  <div class="jumbotron" id="work-jumbo">
+    <h1>Examples of My Work</h1>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-md-4 col-md-offset-1">
+      <p id="work-para">Having just completed <a href="http://careerfoundry.com/" target="_blank">CareerFoundry's</a> intensive <strong>Full Stack Web Development</strong> bootcamp course, I've learned more than new skills. I have a better understanding of what it means to be a web developer. I strive not just for a working website or a pretty one, but <strong>clean code, responsive design, and easy functionality.</strong> While I'm still relatively new to the field, please check out my works so far! Click the thumbnails to see the live sites.</p>
+    </div>
+    <div class="col-xs-6 col-md-6">
+      <img src="/img/skill-chart copy.png" alt="skill chart" class="img-responsive">
+    </div>
+  </div>
+  <ul class="thumbnails">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <li class="span4">
+          <a href="#" class="thumbnail">
+            <img src="/img/sharpline.png" alt="Sharpline Strategies, LLC" class="img-responsive">
+          </a>
+        </li>
+        <p>For my first web project, I didn't do development at all, but Search Engine Optimization for Sharpline Stategies, LLC. Sharpline had been in business for a while, but wasn't seeing the traffic they wanted. I set them up with Google Analytics, wrote code that would get them recoginized, and watched the site hits grow. After only a few weeks, Sharpline's traffic had tripled! The experience taught me how to write code effectively so that search engines and customers can easily find websites - an invaluable lesson.</p></div>
+        <div class="col-xs-12 col-md-4">
+          <li class="span4">
+            <a href="#" class="thumbnail">
+              <img src="/img/saunder.jpg" alt="Dave Saunders, PGA Pro">
+            </a>
+          </li>
+          <p>David Saunders is an accomplished PGA pro and instructor. He's also a close friend of mine. He came to me for help with his current website that was beginning to become so outdated that he hesitated to advertise it. He wanted a fresher look and better functionality. I did a bit of redesign, moved the code into the Bootstrap world, and fixed some bugs that were causing problems. Now David has a website he's proud to share, and so am I!</p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <li class="span4">
+            <a href="#" class="thumbnail">
+              <img src="/img/say-peanut-butter.png" alt="Say Peanut Butter" class="img-responsive">
+            </a>
+          </li>
+          <p>Say "Peanut Butter"! isn't a real business, but rather the achievment of my CareerFoundry experience. I used the skills I learned in the course to develop this Ruby on Rails app from scratch. While the business might not be real, the website is fully functional and a great example of what I am capable of. The photos are mine, graciously allowed for my use by Riley, Elsie, and Otto - my three dogs.</p>
+        </div>
+      </div>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" style="text-align:center">
+      <h2>To view my full resum&eacute, please click here:</h2>
+      <div class="modal-button">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+          My Resum&eacute
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">My Resum&eacute</h4>
+              </div>
+              <div class="modal-body">
+                <iframe id="Resume-JDuvall" src="/img/Resume-JDuvall.pdf" style="height:550px; width:565px"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid" id="contact">
+  <div class="jumbotron" id="contact-jumbo">
+    <h1>Contact Me!</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6" id="contact-info">
+      <img src="/img/contact.png" alt="contact info" class="img-responsive">
+    </div>
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-6">
+      <div id="map-canvas" style="height:350px; width:500px;  margin:10px">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      <form>
+        <div class="form-group">
+          <label for="Name">Name</label>
+          <input type="name" class="form-control" id="exampleInputName" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputMessage">Message</label>
+          <textarea class="form-control" rows="5" id="exampleInputMessage" placeholder="Enter Message"></textarea>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4 col-md-offset-1" style="text-align:center" id="thanks">
+      <h2>Thanks for stopping by!</br> I hope to hear from you soon.</br> - Jen</h2>
+    </div>
+  </div>
+</div>
+
+<footer>&copy;Jen Duvall 2015
+  </footer>
+
+
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow78.js"></script>
+  <noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+
+
+
+</body>
+</html>

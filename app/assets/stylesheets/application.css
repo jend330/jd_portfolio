@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+	font-family: Life Savers;
+	font-size: .5em;
+}
+h2 {
+	font-family: Miniver;
+}
+p {
+	font-family: Raleway;
+	font-size: 1.1em;
+}
+
+
+ul li {
+	font-family: Life Savers;
+	font-size: 2.2em;
+}
+ul li:hover {
+	color: #9600FA;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+#home {
+	background-color: white
+}
+#home-row {
+	margin-left: 40px;
+}
+#me_home {
+
+}
+#about-jumbo {
+	background-color: #9BB258;
+	text-align: center;
+	padding: 30px;
+	margin: 50px;
+}
+p span {
+	font-family: Miniver;
+	font-size: 2em;
+	text-align: center;
+}
+#work-jumbo {
+	background-color: #9BB258;
+	text-align: center;
+	padding: 30px;
+	margin: 50px;
+}
+#contact-jumbo {
+	background-color: #9BB258;
+	text-align: center;
+	padding: 30px;
+	margin: 50px;
+}
+#carousel-about {
+	max-width: 300px;
+	max-height: 400px;
+}
+#tweet {
+	background-image: url(img/tweet.jpg);
+}
+#work-para {
+	font-size: 1.4em;
+}
+#contact-info {
+	position: relative;
+	left: 50px;
+}
+form {
+	margin-bottom: 20px;
+}
+#thanks {
+	position: relative;
+	top: 100px;
+}
+footer {
+	font-family: Life Savers;
+	font-size: 1.5em;
+	background-color: #9BB258;
+}
