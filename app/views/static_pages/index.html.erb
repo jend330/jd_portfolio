@@ -219,24 +219,25 @@
 			</div>
 		</div>
 	</div>
-		<%= form_tag("/static_pages/thank_you") do %>
-<div class="row">
-	<div class="col-md-5 col-md-offset-1">
-		<div class="form-group">
-			<%= label_tag :name, "Name" %>
-	<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+	<%= flash[:notice] %>
+	<%= form_tag("/static_pages/thank_you") do %>	
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<div class="form-group">
+				<%= label_tag :name, "Name" %>
+				<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+			</div>
+			<div class="form-group">
+				<%= label_tag :email, "Email Address" %>
+				<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+			</div>
+			<div class="form-group">
+				<%= label_tag :message, "Message" %>
+				<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+			</div>
+			<%= submit_tag "Send", {:style => 'background-color:gray'} %>
 		</div>
-		<div class="form-group">
-			<%= label_tag :email, "Email Address" %>
-	<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
-		</div>
-		<div class="form-group">
-			<%= label_tag :message, "Message" %>
-	<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
-		</div>
-		<%= submit_tag "Send", {:style => 'background-color:gray'} %>
-	</div>
-<% end %>
+		<% end %>
 		<div class="col-md-4 col-md-offset-1" style="text-align:center" id="thanks">
 			<h2>Thanks for stopping by!</br> I hope to hear from you soon.</br> - Jen</h2>
 		</div>
