@@ -79,7 +79,7 @@ p span {
 	max-height: 400px;
 }
 #tweet {
-	background-image: url(img/tweet.jpg);
+	background-image: url(/img/tweet.jpg);
 }
 #work-para {
 	font-size: 1.4em;
