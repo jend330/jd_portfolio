@@ -78,22 +78,30 @@ p span {
 	max-width: 300px;
 	max-height: 400px;
 }
+@media (min-width: 916px) {
 #tweet {
 	background-image: url(/img/tweet.jpg);
+	}
 }
+
 #work-para {
 	font-size: 1.4em;
 }
-#contact-info {
-	position: relative;
-	left: 50px;
+#contact-info p {
+	font-family: Life Savers;
+	font-size: 1.5em;
 }
+
 form {
 	margin-bottom: 20px;
+}
+#form {
+	font-size: 2em;
 }
 #thanks {
 	position: relative;
 	top: 100px;
+	padding-bottom: 100px;
 }
 footer {
 	font-family: Life Savers;

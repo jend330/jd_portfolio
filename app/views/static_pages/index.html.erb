@@ -46,7 +46,7 @@
 					<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
 					<li><a href="#about">About</a></li>
 					<a class="navbar-brand" href="#">
-						<img alt="Brand" src="/img/jen.png" >
+						<img alt="Brand" src="/img/jen.png">
 					</a>
 					<li><a href="#work">Work</a></li>
 					<li><a href="#contact">Contact</a></li>
@@ -80,19 +80,19 @@
 			<div class="col-xs-12" style="text-align:center">
 				<p><span>My road hasn't been a straight one, but it's the journey, right?</span></p> 
 			</div>
-			<div class="col-xs-6 col-md-3">
+			<div class="col-xs-12 col-md-3">
 				<p>I come from a background of administrative work in the Government contracting industry. It's given me a solid foundation of all the great business skills: communication, organization, and leadership. But I knew I wanted something... <em>more</em>.</p>
 				<p>The fork in the road came in 2010 when I got my first DSLR camera, a Canon T1i, and a new creative passion was born. I took pictures - LOTS of them - many of my three beloved dogs because they make such great models.</p>
 			</div>
-			<div class="col-xs-6 col-md-3">
+			<div class="col-xs-12 col-md-3">
 				<p>I learned Photoshop to be able to get the most out of my pictures. But it wasn't until I explored the world of HTML and web design and development that I really found myself. <em>This</em> was that something more I was looking for. A perfect blend of creativity, technical knowledge, and an exciting and ever-changing industry.</p>
 				<p>So with a lot of studying, practicing, and even more coffee, I can now proudly call myself a <strong>web developer</strong>. I've found my path and while it might have taken me a while, I'm also proud of my journey.</p>
 			</div>
-			<div class="col-xs-6 col-md-3">
+			<div class="col-xs-12 col-md-3">
 				<p>To start off my new career, my husband and I have decided to pack up the dogs to make a literal journey and move south from Maryland to Charlotte, NC. Follow my <a href="https://twitter.com/jenduvall330" target="_blank">Twitter feed</a> for all the updates on the move!</p>
 				<p>When I'm not tapping out code or packing up belongings, I love checking out new restaurants, drinking good wine, and traveling, even if it's just local. I'll also take any opportunity to go outdoors for hiking, camping, or kayaking. I enjoy crafting DIY decor for our home and, just to be a little strange, I have an uncanny memory for any bit of celebrity gossip. Keep that in your back pocket for the next office trivia game!</p> 
 			</div>
-			<div class="col-xs-6 col-md-3">
+			<div class="col-xs-12 col-md-3">
 				<div id="carousel-about" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -207,8 +207,11 @@
 		<h1>Contact Me!</h1>
 	</div>
 	<div class="row">
-		<div class="col-md-6" id="contact-info">
-			<img src="/img/contact.png" alt="contact info" class="img-responsive">
+		<div class="col-md-4 col-md-offset-2" id="contact-info">
+			<p><img src="/img/phone.jpg" alt="phone icon" class="icon" height="75" weight="75">(443)&nbsp745-6025</p>
+			<p><img src="/img/email.jpg" alt="email icon" class="icon" height="75" weight="75">jduvall330@gmail.com</p>
+			<p><a href="https://www.linkedin.com/in/jenduvall" target="_blank"><img src="/img/linkedin.jpg" alt="linkedin icon" class="icon" height="75" weight="75">linkedin.com/in/jenduvall</a></p>
+			<p><a href="https://twitter.com/jenduvall330" target="_blank"><img src="/img/twitter.jpg" alt="twitter icon" class="icon" height="75" weight="75">@jenduvall330</a></p>
 		</div>
 		<div class="col-md-6">
 		</div>
@@ -217,10 +220,12 @@
 			</div>
 		</div>
 	</div>
-	<%= flash[:notice] %>
-	<%= form_tag("/static_pages/thank_you") do %>	
+		
 	<div class="row">
 		<div class="col-md-5 col-md-offset-1">
+			<h1 id="form">Or use this handy form:</h1>
+			<%= flash[:notice] %>
+			<%= form_tag("/static_pages/thank_you") do %>
 			<div class="form-group">
 				<%= label_tag :name, "Name" %>
 				<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
@@ -236,7 +241,7 @@
 			<%= submit_tag "Send", {:style => 'background-color:gray'} %>
 		</div>
 		<% end %>
-		<div class="col-md-4 col-md-offset-1" style="text-align:center" id="thanks">
+		<div class="col-xs-12 col-md-4 col-md-offset-1" style="text-align:center" id="thanks">
 			<h2>Thanks for stopping by!</br> I hope to hear from you soon.</br> - Jen</h2>
 		</div>
 	</div>
