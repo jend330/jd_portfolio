@@ -30,9 +30,6 @@ ul li {
 	font-family: Life Savers;
 	font-size: 2.2em;
 }
-ul li:hover {
-	color: #9600FA;
-}
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
