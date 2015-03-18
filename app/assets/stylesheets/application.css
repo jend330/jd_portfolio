@@ -24,8 +24,10 @@ p {
 	font-family: Raleway;
 	font-size: 1.1em;
 }
-
-
+ul {
+	list-style: none;
+	margin-top: 20px;
+}
 ul li {
 	font-family: Life Savers;
 	font-size: 2.2em;
