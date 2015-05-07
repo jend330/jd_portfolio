@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+body {
+	-webkit-perspective: 2000px;
+	-moz-perspective: 2000px;
+	-o-perspective: 2000px;
+	-perspective: 2000px;
+}
 h1 {
 	font-family: Life Savers;
 	font-size: .5em;
@@ -37,9 +43,11 @@ ul li {
   float: none;
   vertical-align: top;
 }
-
 .navbar .navbar-collapse {
   text-align: center;
+}
+ul li:hover {
+	background: #D1D1D1;
 }
 #home {
 	background-color: white
@@ -47,14 +55,26 @@ ul li {
 #home-row {
 	margin-left: 40px;
 }
-#me_home {
-
+#logo {
+	transition: -webkit-transform 2s ease-in;	
+	transition: -moz-transform 2s ease-in;
+	transition: -o-transform 2s ease-in;
+	transition: -transform 2s ease-in;
+}
+#logo:hover {
+	-webkit-transform: rotateX(360deg);
+	-moz-transform: rotateX(360deg);
+	-o-transform: rotateX(360deg);
+	-transform: rotateX(360deg);
 }
 #about-jumbo {
 	background-color: #9BB258;
 	text-align: center;
 	padding: 30px;
 	margin: 50px;
+}
+#tweet {
+	background-image: url("/img/tweet.jpg");
 }
 p span {
 	font-family: Miniver;
@@ -73,16 +93,16 @@ p span {
 	padding: 30px;
 	margin: 50px;
 }
+/*#car-map {
+	background-image: url("/img/car-map.jpg");
+	background-attachment: fixed;
+	height: 300px;
+	repeat: none;
+}*/
 #carousel-about {
 	max-width: 300px;
 	max-height: 400px;
 }
-@media (min-width: 916px) {
-#tweet {
-	background-image: url(/img/tweet.jpg);
-	}
-}
-
 #work-para {
 	font-size: 1.4em;
 }
@@ -106,4 +126,20 @@ footer {
 	font-family: Life Savers;
 	font-size: 1.5em;
 	background-color: #9BB258;
+}
+
+@media screen and (max-width: 840px) {
+	#logo {
+		opacity: 0;
+	}
+}
+@media screen and (max-width: 1100px) {
+	#tweet {
+		background-image: none;
+	}
+}
+@media screen and (max-width: 840px) {
+	.jumbotron {
+		font-size: 100px;
+	}
 }
