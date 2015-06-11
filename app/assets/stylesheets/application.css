@@ -61,7 +61,7 @@ ul li:hover {
 	transition: -o-transform 2s ease-in;
 	transition: -transform 2s ease-in;
 }
-#push-pin {
+#push_pin {
 	width: 100%;
 	height: 100%;
 }
