@@ -148,7 +148,7 @@
 		<div class="col-xs-6 col-md-4 col-md-offset-1">
 			<p id="work-para">Having just completed <a href="http://careerfoundry.com/" target="_blank">CareerFoundry's</a> intensive <strong>Full Stack Web Development</strong> bootcamp course, I've learned more than new skills. I have a better understanding of what it means to be a web developer. I strive not just for a working website or a pretty one, but <strong>clean code, responsive design, and easy functionality.</strong> While I'm still relatively new to the field, please check out my works so far! Click the thumbnails to see the live sites.</p>
 		</div>
-		<div class="wow slideInRight animated" data-wow-offset="300" style="visibility: visible;-webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;">
+		<div data-sr='enter right'>
 			<img src="/img/skill-chart copy.png" alt="skill chart" class="img-responsive">
 		</div>
 	</div>
@@ -157,7 +157,7 @@
 			<div class="col-xs-12 col-md-4">
 				<li>
 					<a href="http://www.sharplinestrategies.com/" target="_blank" class="thumbnail">
-						<div class="work_link">
+						<div class="work_link" data-sr='spin 360deg'>
 							<img src="/img/sharpline.jpg" alt="Sharpline Strategies, LLC" class="work_image img-responsive">
 							<div class="work_title"><h3 id="sharpline">Sharpline Strategies</h3></div>
 						</div>
@@ -167,7 +167,7 @@
 				<div class="col-xs-12 col-md-4">
 					<li>
 						<a href="http://www.davidsaunderspga.com" target="_blank" class="thumbnail">
-							<div class="work_link">
+							<div class="work_link" data-sr='wait .5s, spin 360deg'>
 								<img src="/img/david-saunders.jpg" alt="David Saunders, PGA Pro" class="work_image img-responsive">
 								<div class="work_title"><h3 id="dave">Golf Instruction with </br>David Saunders</h3></div>
 							</div>
@@ -178,7 +178,7 @@
 				<div class="col-xs-12 col-md-4">
 					<li>
 						<a href="https://say-peanut-butter.herokuapp.com/" target="_blank" class="thumbnail">
-							<div class="work_link">
+							<div class="work_link" data-sr='wait 1s, spin 360deg'>
 								<img src="/img/say-peanut-butter.jpg" alt="Say Peanut Butter" class="work_image img-responsive">
 								<div class="work_title"><h3 id="peanut">Say "Peanut Butter"!</h3></div>
 							</div>
@@ -278,11 +278,18 @@ ga('create', 'UA-61261473-1', 'auto');
 ga('send', 'pageview');
 
 </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script>
 new WOW().init();
 </script>
+<script src="js/scrollReveal.min.js"></script>
+    <script>
+
+      window.sr = new scrollReveal();
+
+    </script>
 
 </body>
 </html>
