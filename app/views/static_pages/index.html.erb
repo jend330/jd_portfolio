@@ -23,10 +23,12 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+	<link rel="stylesheet" href="/assets/stylesheets/animate.css">
 
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
+
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<img src="/img/push_pin.jpg" alt="push pin on map" class="img-responsive">
@@ -57,15 +59,16 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
+
 	<div class="container-fluid" id="home">
 		<div class="row" style="margin-top:90px" id="home-row">
-			<div class="col-xs-4">
+			<div class="col-xs-4 wow slideInLeft animated" data-wow-delay="1s" data-wow-duration="3s" style="visibility: visible;-webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;">
 				<img src="/img/web-dev.png" alt="web developer" class="img-responsive">
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-4 wow fadeIn animated" data-wow-delay="1s" style="visibility: visible;-webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;">
 				<img src="/img/me-vinyard.png" alt="jen at vineyard" class="img-responsive" id="me_home">
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-4 wow slideInRight animated" data-wow-delay="1s" style="visibility: visible;-webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;">
 				<img src="/img/on-the-road.png" alt="on the road" class="img-responsive">
 			</div>
 
@@ -143,31 +146,40 @@
 		<div class="col-xs-6 col-md-4 col-md-offset-1">
 			<p id="work-para">Having just completed <a href="http://careerfoundry.com/" target="_blank">CareerFoundry's</a> intensive <strong>Full Stack Web Development</strong> bootcamp course, I've learned more than new skills. I have a better understanding of what it means to be a web developer. I strive not just for a working website or a pretty one, but <strong>clean code, responsive design, and easy functionality.</strong> While I'm still relatively new to the field, please check out my works so far! Click the thumbnails to see the live sites.</p>
 		</div>
-		<div class="col-xs-6 col-md-6">
+		<div class="wow slideInRight animated" data-wow-offset="300" style="visibility: visible;-webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;">
 			<img src="/img/skill-chart copy.png" alt="skill chart" class="img-responsive">
 		</div>
 	</div>
 	<ul class="thumbnails">
 		<div class="row">
 			<div class="col-xs-12 col-md-4">
-				<li class="span4">
+				<li>
 					<a href="http://www.sharplinestrategies.com/" target="_blank" class="thumbnail">
-						<img src="/img/sharpline.png" alt="Sharpline Strategies, LLC" class="img-responsive">
+						<div class="work_link">
+							<img src="/img/sharpline.png" alt="Sharpline Strategies, LLC" class="work_image img-responsive">
+							<div class="work_title"><h3 id="sharpline">Sharpline Strategies</h3></div>
+						</div>
 					</a>
 				</li>
 				<p>For my first web project, I didn't do development at all, but Search Engine Optimization for Sharpline Stategies, LLC. Sharpline had been in business for a while, but wasn't seeing the traffic they wanted. I set them up with Google Analytics, wrote code that would get them recoginized, and watched the site hits grow. After only a few weeks, Sharpline's traffic had tripled! The experience taught me how to write code effectively so that search engines and customers can easily find websites - an invaluable lesson.</p></div>
 				<div class="col-xs-12 col-md-4">
-					<li class="span4">
+					<li>
 						<a href="http://david-saunders.herokuapp.com/" target="_blank" class="thumbnail">
-							<img src="/img/david-saunders.png" alt="Dave Saunders, PGA Pro" class="img-responsive">
+							<div class="work_link">
+								<img src="/img/david-saunders.png" alt="David Saunders, PGA Pro" class="work_image img-responsive">
+								<div class="work_title"><h3 id="dave">Golf Instruction with </br>David Saunders</h3></div>
+							</div>
 						</a>
 					</li>
 					<p>David Saunders is an accomplished PGA pro and instructor. He's also a close friend of mine. He came to me for help with his current website that was beginning to become so outdated that he hesitated to advertise it. He wanted a fresher look and better functionality. I did a bit of redesign, moved the code into the Bootstrap world, and fixed some bugs that were causing problems. Now David has a website he's proud to share, and so am I!</p>
 				</div>
 				<div class="col-xs-12 col-md-4">
-					<li class="span4">
+					<li>
 						<a href="https://say-peanut-butter.herokuapp.com/" target="_blank" class="thumbnail">
-							<img src="/img/say-peanut-butter.png" alt="Say Peanut Butter" class="img-responsive">
+							<div class="work_link">
+								<img src="/img/say-peanut-butter.png" alt="Say Peanut Butter" class="work_image img-responsive">
+								<div class="work_title"><h3 id="peanut">Say "Peanut Butter"!</h3></div>
+							</div>
 						</a>
 					</li>
 					<p>Say "Peanut Butter"! isn't a real business, but rather the achievment of my CareerFoundry experience. I used the skills I learned in the course to develop this Ruby on Rails app from scratch. While the business might not be real, the website is fully functional and a great example of what I am capable of. The photos are mine, graciously allowed for my use by Riley, Elsie, and Otto - my three dogs.</p>
@@ -254,6 +266,7 @@
 
 
 
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -269,8 +282,11 @@
   ga('send', 'pageview');
 
 </script>
-
-
+<script src="js/wow.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
 
 </body>
 </html>
