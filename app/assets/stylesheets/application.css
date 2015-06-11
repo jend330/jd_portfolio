@@ -93,12 +93,12 @@ p span {
 	padding: 30px;
 	margin: 50px;
 }
-/*#car-map {
-	background-image: url("/img/car-map.jpg");
+#car-map {
+	background-image: url("/img/way-home.jpg");
 	background-attachment: fixed;
 	height: 300px;
 	repeat: none;
-}*/
+}
 #carousel-about {
 	max-width: 300px;
 	max-height: 400px;
